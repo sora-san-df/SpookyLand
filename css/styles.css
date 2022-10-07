@@ -1,0 +1,16 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    counter-reset: game;
+}
+
+input:checked{
+    counter-increment: game;
+}
+.total-count::after{
+    content: counter(game); 
+}
