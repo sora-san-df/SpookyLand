@@ -10,9 +10,17 @@ body{
     place-items: center;
     counter-reset: game;
 }
-.total-count{
+.myAppTitle{
+   
     text-align: center;
-    font-family: 'Silkscreen', cursive;
+    font-family: 'Creepster', cursive;
+    
+}
+.total-count{
+    position: absolute;
+    top: 50px;
+    left: 115px;
+    font-family: 'Creepster', cursive;
 }
 .total-count::after{
     content: counter(game); 
