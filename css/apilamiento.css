@@ -24,21 +24,62 @@ body{
 .layer-1{
     position: absolute;
     z-index: 1;
-    height:450px;
+    height:455px;
     width: 80px;
-    background:white;
+    /* background:white; */
     bottom: 0;
     right: 60px;
+    animation-name: cubito;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+@keyframes cubito{
+    0%{
+        bottom: 0;
+    }
+    25%{
+        bottom: -80px;
+    }
+    100%{
+        bottom: 0;
+    }
+}
+input[type=checkbox]{
+        position: absolute;
+        appearance: none;
+        cursor: pointer;
+        z-index: 1;
+        width: 100%;
+        height: 80px;
+
 }
 .layer-2{
     position: absolute;
     z-index: 2;
-    height: 450px;
+    height: 455px;
     width: 80px;
-    background: white;
+    /* background: white; */
     bottom: 0;
     left: 60px; 
+    animation-name: cubito2;
+    animation-duration: 2.2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
 }
+@keyframes cubito2{
+    0%{
+        bottom: 0;
+    }
+    25%{
+        bottom: -80px;
+    }
+    100%{
+        bottom: 0;
+    }
+}
+
+
 .layer-3{
     position: absolute;
     z-index: 3;
@@ -47,7 +88,7 @@ body{
     margin: 0 auto;
     width: 220px;
     height: 400px; 
-    background: #A5B452;
+    background: #705d25;
     bottom: 0; 
     border-radius: 10px;
 
@@ -55,16 +96,33 @@ body{
 .layer-4{
     position: absolute;
     z-index: 4;
-    background: white;
-    height:  250px;
+    /* background: white; */
+    height:  355px;
     width: 80px; 
     left: 20px;
-    top: 250px;
+    /* top: 250px; */
+    
+    animation-name: cubito3;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+@keyframes cubito3{
+    0%{
+        bottom: 0;
+    }
+    25%{
+        bottom: -80px;
+    }
+    100%{
+        bottom: 0;
+    }
+
 }
 .layer-5{
     position: absolute;
     z-index: 5;
-    background: #A5B452;
+    background: #705d25;
     width: 220px;
     height: 210px;
     top:309px;
@@ -74,16 +132,32 @@ body{
 .layer-6{
     position: absolute;
     z-index: 6;
-    background: white;
-    height: 250px;
+   /*  background: white; */
+    height: 255px;
     width: 80px;
     right: 60px;
     bottom: 0;
+    animation-name: cubito4;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+@keyframes cubito4{
+    0%{
+        bottom: 0;
+    }
+    25%{
+        bottom: -80px;
+    }
+    100%{
+        bottom: 0;
+    }
+
 }
 .layer-7{
     position: absolute;
     z-index: 7; 
-    background: #A5B452;
+    background: #705d25;
     width: 235px;
     height: 190px;
     left: 50px;
@@ -168,4 +242,55 @@ body{
     border-radius: 10px;
     box-shadow:  0px 2px 23px 0px rgba(0,0,0,0.75);
     right: 0; 
+}
+
+/* Ghost's head! */
+.head{
+    background: white;
+    /* border-radius: 50%; */
+    height: 80px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    position: absolute;
+    top: 30px;
+    width: 100%;
+}
+.head__eye{
+    background: rgb(0, 0, 0);
+    border-radius: 50%;
+    width: 7px;
+    height: 7px;
+    position: absolute;
+    top: 15px; 
+    animation-name: blink;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes blink{
+    0%{
+        height: 4px;
+    }
+    5%{
+        transform: translate(0px, 2px);
+        height: 1px;
+    }
+    10%{
+        transform: translate(0px, 0px);
+        height: 4px;
+    }
+}
+.head__eye--left{
+    left: 30px;
+}
+.head__eye--right{
+    right: 20px;
+}
+/*Grass shadow*/
+.grassShadow{
+    width: 100%;
+    height: 10px;
+    background: #6a7433;
+    /* border-radius: 10px; */
 }
